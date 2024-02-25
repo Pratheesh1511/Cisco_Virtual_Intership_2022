@@ -1,1 +1,56 @@
+ipp=[]
+ip,ip2,ip3,ip4,ip5,ip6,ip7,ip8,ip9,ip10 = [],[],[],[],[],[],[],[],[],[]
+n = 1
+for i in range (5):
+    a1=input("Enter the IPv4 :")
+    ipp.append(a1)
 
+for i in ipp:
+    parts =i.split('.')
+    if len (parts)!=4:
+        print('Invalid IPv4 Address ')
+        exit()
+    for part in parts:
+        if not isinstance(int(part),int):
+            print('Invalid IPv4 Address ')
+            exit()
+        if int(part)<0 or int(part) >=255:
+            print('Invalid IPv4 Address ')
+            exit()
+        if int(parts[0])==0:
+            print('Invalid IPv4 Address ')
+            exit()
+    b1 = '.'.join([bin(int(x) + 256)[3:] for x in a1.split('.')])
+    o1 = '.'.join([oct(int(y) + 256)[3:] for y in a1.split('.')])
+    h1 = '.'.join([hex(int(z) + 256)[3:] for z in a1.split('.')])
+    a = "Decimal :" + a1
+    b = 'Binary :' + b1
+    o = 'Octal :' + o1
+    h = 'Hexa :' + h1
+    if n == 1:
+        ip.append([a]), ip.append([b]), ip.append([o]), ip.append([h])
+    elif n == 2:
+        ip2.append([a]), ip2.append([b]), ip2.append([o]), ip2.append([h])
+    elif n == 3:
+        ip3.append([a]), ip3.append([b]), ip3.append([o]), ip3.append([h])
+    elif n == 4:
+        ip4.append([a]), ip4.append([b]), ip4.append([o]), ip4.append([h])
+    elif n == 5:
+        ip5.append([a]), ip5.append([b]), ip5.append([o]), ip5.append([h])
+    elif n == 6:
+        ip6.append([a]), ip6.append([b]), ip6.append([o]), ip6.append([h])
+    elif n == 7:
+        ip7.append([a]), ip7.append([b]), ip7.append([o]), ip7.append([h])
+    elif n == 8:
+        ip8.append([a]), ip8.append([b]), ip8.append([o]), ip8.append([h])
+    elif n == 9:
+        ip9.append([a]), ip9.append([b]), ip9.append([o]), ip9.append([h])
+    elif n == 10:
+        ip10.append([a]), ip10.append([b]), ip10.append([o]), ip10.append([h])
+
+    n = n + 1
+print("\n",ip,"\n",ip2,"\n",ip3,"\n",ip4,"\n",ip5,"\n",ip6,"\n",ip7,"\n",ip8,"\n",ip9,"\n",ip10)
+list = [ip,ip2,ip3,ip4,ip5,ip6,ip7,ip8,ip9,ip10]
+with open('E:/Python/Telephone/music/conversion.txt', 'w')as ps:
+    for k in list:
+        ps.write("%s\n"%k)
