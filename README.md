@@ -1,7 +1,5 @@
-This Python code allows you to enter up to 10 IPv4 addresses and converts them into their corresponding binary, octal, and hexadecimal representations. It also validates the input addresses to ensure they are in the correct format.
-<br>
+This Python code allows you to enter up to 10 IPv4 addresses and converts them into their corresponding binary, octal, and hexadecimal representations. It also validates the input addresses to ensure they are in the correct format.<br>
 **Functionality:** <br>
-<br>
 <br>
 **Input:** <br>
 <br>
